@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "depthrobotic"
+version = "0.2.0"
+description = "Training-free robotic manipulation on LIBERO"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pillow",
+    "pyyaml",
+    "scipy",
+    "torch",
+    "transformers==5.3.0",
+    "accelerate",
+    "torchvision",
+    "omegaconf",
+    "ftfy",
+    "safetensors",
+    "qwen-vl-utils",
+    "imageio[ffmpeg]",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[project.scripts]
+depthrobotic = "depthrobotic.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

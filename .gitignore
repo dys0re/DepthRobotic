@@ -1,0 +1,16 @@
+results/
+*.mp4
+*.pt
+*.safetensors
+vendor/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+.venv/
+*.json.tmp
+weights/
+.local/

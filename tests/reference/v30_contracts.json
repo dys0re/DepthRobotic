@@ -1,0 +1,1006 @@
+{
+  "controller": {
+    "initial_record": {
+      "action": "pick_place_v30_object_state",
+      "source": "bowl",
+      "destination": "on plate",
+      "tool_calls": [
+        {
+          "eupe_reference": {
+            "mode": "eupe",
+            "response": "{}",
+            "box": null,
+            "point": null,
+            "valid": false
+          }
+        },
+        {
+          "v30_reference": {
+            "role": "receiving region",
+            "label": "on plate",
+            "response": "{}",
+            "valid": false
+          }
+        },
+        {
+          "v30_reference": {
+            "role": "source object specified by the instruction",
+            "label": "bowl",
+            "response": "{}",
+            "valid": false
+          }
+        }
+      ],
+      "v16": {
+        "proposer": "GroundingDINO",
+        "sam3": false,
+        "selector": "wrist identity check (unchanged v12)",
+        "last_resort_only_on_final_step": true
+      },
+      "v17": {
+        "proposer": "GroundingDINO",
+        "relation_aware": true,
+        "detector_only_after_v12_rejection": true,
+        "geometry_source": "v12_camera_projection"
+      },
+      "v23": {
+        "alternate_ranking": "DepthVLM numbered-mark multiple choice over the v17 pool",
+        "trigger": "only after v12 identity rejection (v17 _next_source_candidate)",
+        "fallback_on_abstain": "v17 rank-1",
+        "measurement_height_grasp_place": "v12 unchanged"
+      },
+      "v28_revision": "rebuild-r1",
+      "execution_states": [],
+      "v30_state": {
+        "source": {
+          "instance_id": "source",
+          "description": "bowl",
+          "camera": "agentview",
+          "pixel_frame": "upright_0_1000",
+          "point": null,
+          "box": null,
+          "surface_z": null,
+          "world": null,
+          "observed_step": -1,
+          "identity": "UNKNOWN",
+          "association": "UNKNOWN",
+          "geometry_valid": false,
+          "dirty_reason": null
+        },
+        "target": {
+          "instance_id": "target",
+          "description": "on plate",
+          "camera": "agentview",
+          "pixel_frame": "upright_0_1000",
+          "point": null,
+          "box": null,
+          "surface_z": null,
+          "world": null,
+          "observed_step": -1,
+          "identity": "UNKNOWN",
+          "association": "UNKNOWN",
+          "geometry_valid": false,
+          "dirty_reason": null
+        },
+        "held": "UNKNOWN",
+        "held_offset": null,
+        "relation": "UNKNOWN",
+        "transitions": []
+      }
+    },
+    "dispatch": [
+      {
+        "name": "grasp",
+        "args": {
+          "strategy": "rim"
+        },
+        "text": "Error: RuntimeError: No wrist center -- call approach_source first",
+        "record": {
+          "action": "pick_place_v30_object_state",
+          "source": "bowl",
+          "destination": "on plate",
+          "tool_calls": [
+            {
+              "eupe_reference": {
+                "mode": "eupe",
+                "response": "{}",
+                "box": null,
+                "point": null,
+                "valid": false
+              }
+            },
+            {
+              "v30_reference": {
+                "role": "receiving region",
+                "label": "on plate",
+                "response": "{}",
+                "valid": false
+              }
+            },
+            {
+              "v30_reference": {
+                "role": "source object specified by the instruction",
+                "label": "bowl",
+                "response": "{}",
+                "valid": false
+              }
+            },
+            {
+              "tool": "grasp",
+              "args": {
+                "strategy": "rim"
+              }
+            },
+            {
+              "tool": "grasp",
+              "args": {
+                "strategy": "rim"
+              },
+              "result": "Error: RuntimeError: No wrist center -- call approach_source first"
+            }
+          ],
+          "v16": {
+            "proposer": "GroundingDINO",
+            "sam3": false,
+            "selector": "wrist identity check (unchanged v12)",
+            "last_resort_only_on_final_step": true
+          },
+          "v17": {
+            "proposer": "GroundingDINO",
+            "relation_aware": true,
+            "detector_only_after_v12_rejection": true,
+            "geometry_source": "v12_camera_projection"
+          },
+          "v23": {
+            "alternate_ranking": "DepthVLM numbered-mark multiple choice over the v17 pool",
+            "trigger": "only after v12 identity rejection (v17 _next_source_candidate)",
+            "fallback_on_abstain": "v17 rank-1",
+            "measurement_height_grasp_place": "v12 unchanged"
+          },
+          "v28_revision": "rebuild-r1",
+          "execution_states": [
+            {
+              "tool": "grasp",
+              "held": false,
+              "placed_once": false,
+              "steps": 0,
+              "status": "FAILED"
+            }
+          ],
+          "v30_state": {
+            "source": {
+              "instance_id": "source",
+              "description": "bowl",
+              "camera": "agentview",
+              "pixel_frame": "upright_0_1000",
+              "point": null,
+              "box": null,
+              "surface_z": null,
+              "world": null,
+              "observed_step": -1,
+              "identity": "UNKNOWN",
+              "association": "UNKNOWN",
+              "geometry_valid": false,
+              "dirty_reason": null
+            },
+            "target": {
+              "instance_id": "target",
+              "description": "on plate",
+              "camera": "agentview",
+              "pixel_frame": "upright_0_1000",
+              "point": null,
+              "box": null,
+              "surface_z": null,
+              "world": null,
+              "observed_step": -1,
+              "identity": "UNKNOWN",
+              "association": "UNKNOWN",
+              "geometry_valid": false,
+              "dirty_reason": null
+            },
+            "held": "UNKNOWN",
+            "held_offset": null,
+            "relation": "UNKNOWN",
+            "transitions": []
+          }
+        }
+      },
+      {
+        "name": "retry_grasp",
+        "args": {
+          "strategy": "rim",
+          "adjustment": "lower"
+        },
+        "text": "Error: RuntimeError: No wrist center -- call approach_source first",
+        "record": {
+          "action": "pick_place_v30_object_state",
+          "source": "bowl",
+          "destination": "on plate",
+          "tool_calls": [
+            {
+              "eupe_reference": {
+                "mode": "eupe",
+                "response": "{}",
+                "box": null,
+                "point": null,
+                "valid": false
+              }
+            },
+            {
+              "v30_reference": {
+                "role": "receiving region",
+                "label": "on plate",
+                "response": "{}",
+                "valid": false
+              }
+            },
+            {
+              "v30_reference": {
+                "role": "source object specified by the instruction",
+                "label": "bowl",
+                "response": "{}",
+                "valid": false
+              }
+            },
+            {
+              "tool": "grasp",
+              "args": {
+                "strategy": "rim"
+              }
+            },
+            {
+              "tool": "grasp",
+              "args": {
+                "strategy": "rim"
+              },
+              "result": "Error: RuntimeError: No wrist center -- call approach_source first"
+            },
+            {
+              "tool": "retry_grasp",
+              "args": {
+                "strategy": "rim",
+                "adjustment": "lower"
+              }
+            },
+            {
+              "recovery": {
+                "failure": null,
+                "n_same": 0,
+                "model_adjustment": "lower",
+                "model_strategy": "rim",
+                "executor_recovery": null,
+                "applied_strategy": "rim",
+                "dz": -0.02
+              }
+            },
+            {
+              "tool": "retry_grasp",
+              "args": {
+                "strategy": "rim",
+                "adjustment": "lower"
+              },
+              "result": "Error: RuntimeError: No wrist center -- call approach_source first"
+            }
+          ],
+          "v16": {
+            "proposer": "GroundingDINO",
+            "sam3": false,
+            "selector": "wrist identity check (unchanged v12)",
+            "last_resort_only_on_final_step": true
+          },
+          "v17": {
+            "proposer": "GroundingDINO",
+            "relation_aware": true,
+            "detector_only_after_v12_rejection": true,
+            "geometry_source": "v12_camera_projection"
+          },
+          "v23": {
+            "alternate_ranking": "DepthVLM numbered-mark multiple choice over the v17 pool",
+            "trigger": "only after v12 identity rejection (v17 _next_source_candidate)",
+            "fallback_on_abstain": "v17 rank-1",
+            "measurement_height_grasp_place": "v12 unchanged"
+          },
+          "v28_revision": "rebuild-r1",
+          "execution_states": [
+            {
+              "tool": "grasp",
+              "held": false,
+              "placed_once": false,
+              "steps": 0,
+              "status": "FAILED"
+            },
+            {
+              "tool": "retry_grasp",
+              "held": false,
+              "placed_once": false,
+              "steps": 0,
+              "status": "FAILED"
+            }
+          ],
+          "v30_state": {
+            "source": {
+              "instance_id": "source",
+              "description": "bowl",
+              "camera": "agentview",
+              "pixel_frame": "upright_0_1000",
+              "point": null,
+              "box": null,
+              "surface_z": null,
+              "world": null,
+              "observed_step": -1,
+              "identity": "UNKNOWN",
+              "association": "UNKNOWN",
+              "geometry_valid": false,
+              "dirty_reason": null
+            },
+            "target": {
+              "instance_id": "target",
+              "description": "on plate",
+              "camera": "agentview",
+              "pixel_frame": "upright_0_1000",
+              "point": null,
+              "box": null,
+              "surface_z": null,
+              "world": null,
+              "observed_step": -1,
+              "identity": "UNKNOWN",
+              "association": "UNKNOWN",
+              "geometry_valid": false,
+              "dirty_reason": null
+            },
+            "held": "UNKNOWN",
+            "held_offset": null,
+            "relation": "UNKNOWN",
+            "transitions": []
+          }
+        }
+      },
+      {
+        "name": "unknown",
+        "args": {},
+        "text": "Unknown tool: unknown",
+        "record": {
+          "action": "pick_place_v30_object_state",
+          "source": "bowl",
+          "destination": "on plate",
+          "tool_calls": [
+            {
+              "eupe_reference": {
+                "mode": "eupe",
+                "response": "{}",
+                "box": null,
+                "point": null,
+                "valid": false
+              }
+            },
+            {
+              "v30_reference": {
+                "role": "receiving region",
+                "label": "on plate",
+                "response": "{}",
+                "valid": false
+              }
+            },
+            {
+              "v30_reference": {
+                "role": "source object specified by the instruction",
+                "label": "bowl",
+                "response": "{}",
+                "valid": false
+              }
+            },
+            {
+              "tool": "grasp",
+              "args": {
+                "strategy": "rim"
+              }
+            },
+            {
+              "tool": "grasp",
+              "args": {
+                "strategy": "rim"
+              },
+              "result": "Error: RuntimeError: No wrist center -- call approach_source first"
+            },
+            {
+              "tool": "retry_grasp",
+              "args": {
+                "strategy": "rim",
+                "adjustment": "lower"
+              }
+            },
+            {
+              "recovery": {
+                "failure": null,
+                "n_same": 0,
+                "model_adjustment": "lower",
+                "model_strategy": "rim",
+                "executor_recovery": null,
+                "applied_strategy": "rim",
+                "dz": -0.02
+              }
+            },
+            {
+              "tool": "retry_grasp",
+              "args": {
+                "strategy": "rim",
+                "adjustment": "lower"
+              },
+              "result": "Error: RuntimeError: No wrist center -- call approach_source first"
+            },
+            {
+              "tool": "unknown",
+              "args": {}
+            },
+            {
+              "tool": "unknown",
+              "args": {},
+              "result": "Unknown tool: unknown"
+            }
+          ],
+          "v16": {
+            "proposer": "GroundingDINO",
+            "sam3": false,
+            "selector": "wrist identity check (unchanged v12)",
+            "last_resort_only_on_final_step": true
+          },
+          "v17": {
+            "proposer": "GroundingDINO",
+            "relation_aware": true,
+            "detector_only_after_v12_rejection": true,
+            "geometry_source": "v12_camera_projection"
+          },
+          "v23": {
+            "alternate_ranking": "DepthVLM numbered-mark multiple choice over the v17 pool",
+            "trigger": "only after v12 identity rejection (v17 _next_source_candidate)",
+            "fallback_on_abstain": "v17 rank-1",
+            "measurement_height_grasp_place": "v12 unchanged"
+          },
+          "v28_revision": "rebuild-r1",
+          "execution_states": [
+            {
+              "tool": "grasp",
+              "held": false,
+              "placed_once": false,
+              "steps": 0,
+              "status": "FAILED"
+            },
+            {
+              "tool": "retry_grasp",
+              "held": false,
+              "placed_once": false,
+              "steps": 0,
+              "status": "FAILED"
+            },
+            {
+              "tool": "unknown",
+              "held": false,
+              "placed_once": false,
+              "steps": 0,
+              "status": "UNKNOWN"
+            }
+          ],
+          "v30_state": {
+            "source": {
+              "instance_id": "source",
+              "description": "bowl",
+              "camera": "agentview",
+              "pixel_frame": "upright_0_1000",
+              "point": null,
+              "box": null,
+              "surface_z": null,
+              "world": null,
+              "observed_step": -1,
+              "identity": "UNKNOWN",
+              "association": "UNKNOWN",
+              "geometry_valid": false,
+              "dirty_reason": null
+            },
+            "target": {
+              "instance_id": "target",
+              "description": "on plate",
+              "camera": "agentview",
+              "pixel_frame": "upright_0_1000",
+              "point": null,
+              "box": null,
+              "surface_z": null,
+              "world": null,
+              "observed_step": -1,
+              "identity": "UNKNOWN",
+              "association": "UNKNOWN",
+              "geometry_valid": false,
+              "dirty_reason": null
+            },
+            "held": "UNKNOWN",
+            "held_offset": null,
+            "relation": "UNKNOWN",
+            "transitions": []
+          }
+        }
+      },
+      {
+        "name": "done",
+        "args": {},
+        "text": "Step complete.",
+        "record": {
+          "action": "pick_place_v30_object_state",
+          "source": "bowl",
+          "destination": "on plate",
+          "tool_calls": [
+            {
+              "eupe_reference": {
+                "mode": "eupe",
+                "response": "{}",
+                "box": null,
+                "point": null,
+                "valid": false
+              }
+            },
+            {
+              "v30_reference": {
+                "role": "receiving region",
+                "label": "on plate",
+                "response": "{}",
+                "valid": false
+              }
+            },
+            {
+              "v30_reference": {
+                "role": "source object specified by the instruction",
+                "label": "bowl",
+                "response": "{}",
+                "valid": false
+              }
+            },
+            {
+              "tool": "grasp",
+              "args": {
+                "strategy": "rim"
+              }
+            },
+            {
+              "tool": "grasp",
+              "args": {
+                "strategy": "rim"
+              },
+              "result": "Error: RuntimeError: No wrist center -- call approach_source first"
+            },
+            {
+              "tool": "retry_grasp",
+              "args": {
+                "strategy": "rim",
+                "adjustment": "lower"
+              }
+            },
+            {
+              "recovery": {
+                "failure": null,
+                "n_same": 0,
+                "model_adjustment": "lower",
+                "model_strategy": "rim",
+                "executor_recovery": null,
+                "applied_strategy": "rim",
+                "dz": -0.02
+              }
+            },
+            {
+              "tool": "retry_grasp",
+              "args": {
+                "strategy": "rim",
+                "adjustment": "lower"
+              },
+              "result": "Error: RuntimeError: No wrist center -- call approach_source first"
+            },
+            {
+              "tool": "unknown",
+              "args": {}
+            },
+            {
+              "tool": "unknown",
+              "args": {},
+              "result": "Unknown tool: unknown"
+            },
+            {
+              "tool": "done",
+              "args": {}
+            },
+            {
+              "tool": "done",
+              "args": {},
+              "result": "Step complete."
+            }
+          ],
+          "v16": {
+            "proposer": "GroundingDINO",
+            "sam3": false,
+            "selector": "wrist identity check (unchanged v12)",
+            "last_resort_only_on_final_step": true
+          },
+          "v17": {
+            "proposer": "GroundingDINO",
+            "relation_aware": true,
+            "detector_only_after_v12_rejection": true,
+            "geometry_source": "v12_camera_projection"
+          },
+          "v23": {
+            "alternate_ranking": "DepthVLM numbered-mark multiple choice over the v17 pool",
+            "trigger": "only after v12 identity rejection (v17 _next_source_candidate)",
+            "fallback_on_abstain": "v17 rank-1",
+            "measurement_height_grasp_place": "v12 unchanged"
+          },
+          "v28_revision": "rebuild-r1",
+          "execution_states": [
+            {
+              "tool": "grasp",
+              "held": false,
+              "placed_once": false,
+              "steps": 0,
+              "status": "FAILED"
+            },
+            {
+              "tool": "retry_grasp",
+              "held": false,
+              "placed_once": false,
+              "steps": 0,
+              "status": "FAILED"
+            },
+            {
+              "tool": "unknown",
+              "held": false,
+              "placed_once": false,
+              "steps": 0,
+              "status": "UNKNOWN"
+            },
+            {
+              "tool": "done",
+              "held": false,
+              "placed_once": false,
+              "steps": 0,
+              "status": "CONTROLLER_STOPPED"
+            }
+          ],
+          "v30_state": {
+            "source": {
+              "instance_id": "source",
+              "description": "bowl",
+              "camera": "agentview",
+              "pixel_frame": "upright_0_1000",
+              "point": null,
+              "box": null,
+              "surface_z": null,
+              "world": null,
+              "observed_step": -1,
+              "identity": "UNKNOWN",
+              "association": "UNKNOWN",
+              "geometry_valid": false,
+              "dirty_reason": null
+            },
+            "target": {
+              "instance_id": "target",
+              "description": "on plate",
+              "camera": "agentview",
+              "pixel_frame": "upright_0_1000",
+              "point": null,
+              "box": null,
+              "surface_z": null,
+              "world": null,
+              "observed_step": -1,
+              "identity": "UNKNOWN",
+              "association": "UNKNOWN",
+              "geometry_valid": false,
+              "dirty_reason": null
+            },
+            "held": "UNKNOWN",
+            "held_offset": null,
+            "relation": "UNKNOWN",
+            "transitions": []
+          }
+        }
+      }
+    ]
+  },
+  "grammar": {
+    "put the black bowl on the plate": [
+      {
+        "action": "pick_place",
+        "source": "black bowl",
+        "destination": "on plate"
+      }
+    ],
+    "open the top drawer of the cabinet and put the black bowl inside": null,
+    "put both the bowl and the mug in the basket": [
+      {
+        "action": "pick_place",
+        "source": "both the bowl and the mug",
+        "destination": "in basket"
+      }
+    ],
+    "put the bowl in the cabinet and close it": [
+      {
+        "action": "pick_place",
+        "source": "bowl",
+        "destination": "in cabinet"
+      },
+      {
+        "action": "articulate",
+        "target": "cabinet",
+        "mode": "close"
+      }
+    ],
+    "turn on the stove and put the moka pot on it": [
+      {
+        "action": "toggle",
+        "target": "stove",
+        "mode": "on"
+      },
+      {
+        "action": "pick_place",
+        "source": "moka pot",
+        "destination": "on stove"
+      }
+    ],
+    "stack the bowl on the plate": [
+      {
+        "action": "pick_place",
+        "source": "bowl",
+        "destination": "on top of plate"
+      }
+    ],
+    "push the bowl to the right side": [
+      {
+        "action": "push_object",
+        "source": "bowl",
+        "destination": "right side"
+      }
+    ],
+    "pick up the bowl and place it on the plate": [
+      {
+        "action": "pick_place",
+        "source": "bowl",
+        "destination": "on plate"
+      }
+    ],
+    "rotate the turntable 90 degrees": null
+  },
+  "rays": [
+    {
+      "point": [
+        0,
+        0
+      ],
+      "focal": 1000,
+      "size": 832,
+      "ray": [
+        -0.416,
+        0.415,
+        1.0
+      ]
+    },
+    {
+      "point": [
+        500,
+        500
+      ],
+      "focal": 1000,
+      "size": 832,
+      "ray": [
+        -0.0005,
+        -0.0005,
+        1.0
+      ]
+    },
+    {
+      "point": [
+        333,
+        900
+      ],
+      "focal": 700,
+      "size": 832,
+      "ray": [
+        -0.19896714285714284,
+        -0.47557142857142853,
+        1.0
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "approach_source",
+        "description": "Locate the source object in the front camera image, move the robot arm above it, and refine position using the wrist camera. A close-up wrist camera image will be returned so you can observe the object shape.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "object_description": {
+              "type": "string",
+              "description": "The source object to find, including spatial qualifiers from the instruction"
+            }
+          },
+          "required": [
+            "object_description"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "grasp",
+        "description": "Attempt to grasp the object below the gripper. Choose a strategy based on the object's shape and properties that you observed in the wrist camera image. The robot first probes the object's height with closed fingers and measures its width; if the object is too wide for the gripper it tells you and you must choose 'rim'.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "strategy": {
+              "type": "string",
+              "enum": [
+                "rim",
+                "side",
+                "top",
+                "center"
+              ],
+              "description": "rim: grasp the edge/rim (bowls, cups, open containers). side: grasp the body from the side (bottles, tall objects). top: pinch from above (flat items: books, boxes, packaged goods). center: grasp the center (regular solid objects, mugs by body)."
+            }
+          },
+          "required": [
+            "strategy"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "retry_grasp",
+        "description": "The previous grasp was empty. Adjust position or strategy and try again. Think about WHY it failed: wrong height? wrong lateral position? wrong strategy?",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "adjustment": {
+              "type": "string",
+              "enum": [
+                "lower",
+                "higher",
+                "shift_left",
+                "shift_right",
+                "shift_forward",
+                "shift_back",
+                "change_strategy"
+              ],
+              "description": "How to adjust before retrying: lower/higher move the grasp height by 2 cm; shift_* move the grasp point 1.5 cm; change_strategy re-plans with the new strategy."
+            },
+            "strategy": {
+              "type": "string",
+              "enum": [
+                "rim",
+                "side",
+                "top",
+                "center"
+              ],
+              "description": "Grasp strategy for this retry attempt"
+            }
+          },
+          "required": [
+            "adjustment",
+            "strategy"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "place_object",
+        "description": "Transport the held object to the destination and place it. Set is_container=true if the destination has an interior to place INTO (basket, drawer, bowl, compartment, caddy, microwave). Set is_container=false for placing ON a surface (plate, stove, cabinet top, table).",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "destination_description": {
+              "type": "string",
+              "description": "The destination to place the object at"
+            },
+            "is_container": {
+              "type": "boolean",
+              "description": "true if placing INSIDE a container, false if placing ON a surface"
+            }
+          },
+          "required": [
+            "destination_description",
+            "is_container"
+          ]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "done",
+        "description": "Signal that this pick-place step is complete.",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    }
+  ],
+  "parsing": [
+    {
+      "value": null,
+      "point": null,
+      "box": null
+    },
+    {
+      "value": [
+        0.2,
+        0.8
+      ],
+      "point": [
+        200.0,
+        800.0
+      ],
+      "box": null
+    },
+    {
+      "value": [
+        200,
+        800
+      ],
+      "point": [
+        200.0,
+        800.0
+      ],
+      "box": null
+    },
+    {
+      "value": [
+        -1,
+        400
+      ],
+      "point": null,
+      "box": null
+    },
+    {
+      "value": [
+        200,
+        800,
+        400,
+        900
+      ],
+      "point": null,
+      "box": [
+        200.0,
+        800.0,
+        400.0,
+        900.0
+      ]
+    }
+  ],
+  "handle_boxes": [
+    {
+      "response": "[{\"bbox_2d\":[100,200,300,400]}]",
+      "boxes": [
+        [
+          100.0,
+          200.0,
+          300.0,
+          400.0
+        ]
+      ]
+    },
+    {
+      "response": "```json\n{\"bbox_2d\":[0.1,0.2,0.4,0.6]}\n```",
+      "boxes": [
+        [
+          100.0,
+          200.0,
+          400.0,
+          600.0
+        ]
+      ]
+    },
+    {
+      "response": "none",
+      "boxes": []
+    }
+  ]
+}

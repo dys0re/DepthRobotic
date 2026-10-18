@@ -1,0 +1,392 @@
+{
+  "protocol": "reference-v30-libero40",
+  "successes": 16,
+  "episodes": 40,
+  "planned_episodes": 40,
+  "complete": true,
+  "success_rate": 0.4,
+  "by_suite": {
+    "libero_10": {
+      "successes": 0,
+      "episodes": 10,
+      "success_rate": 0.0
+    },
+    "libero_goal": {
+      "successes": 5,
+      "episodes": 10,
+      "success_rate": 0.5
+    },
+    "libero_object": {
+      "successes": 5,
+      "episodes": 10,
+      "success_rate": 0.5
+    },
+    "libero_spatial": {
+      "successes": 6,
+      "episodes": 10,
+      "success_rate": 0.6
+    }
+  },
+  "results": [
+    {
+      "suite": "libero_10",
+      "task_id": 0,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 462,
+      "step_budget": 520,
+      "error": null
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 1,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 459,
+      "step_budget": 520,
+      "error": null
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 2,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 242,
+      "step_budget": 520,
+      "error": null
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 3,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 520,
+      "step_budget": 520,
+      "error": "StepBudgetExceeded: Official 520-step horizon reached"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 4,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 452,
+      "step_budget": 520,
+      "error": null
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 5,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 202,
+      "step_budget": 520,
+      "error": null
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 6,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 520,
+      "step_budget": 520,
+      "error": "StepBudgetExceeded: Official 520-step horizon reached"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 7,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 432,
+      "step_budget": 520,
+      "error": null
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 8,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 520,
+      "step_budget": 520,
+      "error": "StepBudgetExceeded: Official 520-step horizon reached"
+    },
+    {
+      "suite": "libero_10",
+      "task_id": 9,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 452,
+      "step_budget": 520,
+      "error": null
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 0,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 172,
+      "step_budget": 300,
+      "error": null
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 1,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 132,
+      "step_budget": 300,
+      "error": null
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 2,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 237,
+      "step_budget": 300,
+      "error": null
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 3,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 231,
+      "step_budget": 300,
+      "error": null
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 4,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 172,
+      "step_budget": 300,
+      "error": null
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 5,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 104,
+      "step_budget": 300,
+      "error": "RuntimeError: Contact phase 'push' did not reach target [0.009098094279063301, 0.04756567209230841, 1.0140147458697037]"
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 6,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 241,
+      "step_budget": 300,
+      "error": null
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 7,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 68,
+      "step_budget": 300,
+      "error": null
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 8,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 147,
+      "step_budget": 300,
+      "error": null
+    },
+    {
+      "suite": "libero_goal",
+      "task_id": 9,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 173,
+      "step_budget": 300,
+      "error": null
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 0,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 146,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 1,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 235,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 2,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 213,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 3,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 158,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 4,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 177,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 5,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 231,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 6,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 168,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 7,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 208,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 8,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 236,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_object",
+      "task_id": 9,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 149,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 0,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 145,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 1,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 185,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 2,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 158,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 3,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 158,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 4,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 280,
+      "step_budget": 280,
+      "error": "StepBudgetExceeded: Official 280-step horizon reached"
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 5,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 158,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 6,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 262,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 7,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 280,
+      "step_budget": 280,
+      "error": "StepBudgetExceeded: Official 280-step horizon reached"
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 8,
+      "episode": 0,
+      "success": true,
+      "sim_steps": 154,
+      "step_budget": 280,
+      "error": null
+    },
+    {
+      "suite": "libero_spatial",
+      "task_id": 9,
+      "episode": 0,
+      "success": false,
+      "sim_steps": 154,
+      "step_budget": 280,
+      "error": null
+    }
+  ]
+}
